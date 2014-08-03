@@ -1,5 +1,5 @@
 node 'centos01.softcom.local' {
-
+	include mod_wget
 }
 
 node 'centos02.softcom.local' {
