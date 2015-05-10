@@ -34,38 +34,33 @@
 #
 # Copyright 2013 Simon Piette
 #
-class sysadmin (
-  $ensure=present,
-  $sysstat=true,
-  $vim=false,
-  ) {
-  include sysadmin::params
-  package { [
-    'acpid',
-    'blktrace',
-    'curl',
-    'dstat',
-    'ethtool',
-    'gawk',
-    'iotop',
-    'iftop',
-    'iperf',
-    $sysadmin::params::iptraf,
-    $sysadmin::params::mtr,
-    'screen',
-    'traceroute',
-    'wget',
-  ]:
-    ensure => $ensure,
-  }
-  if $vim == true {
-    package { $sysadmin::params::vim:
-      ensure => $ensure
+class sysadmin ($ensure = present, $sysstat = true, $vim = true,) {
+    include sysadmin::params
+
+    package { [
+        'acpid',
+        'blktrace',
+        'curl',
+        'dstat',
+        'ethtool',
+        'gawk',
+        'iotop',
+        'iftop',
+        'iperf',
+        $sysadmin::params::iptraf,
+        $sysadmin::params::mtr,
+        'screen',
+        'traceroute',
+        'man',
+        ]:
+        ensure => $ensure,
     }
-  }
-  if $sysstat == true {
-    package { 'sysstat':
-      ensure => $ensure
+
+    if $vim == true {
+        package { $sysadmin::params::vim: ensure => $ensure }
     }
-  }
+
+    if $sysstat == true {
+        package { 'sysstat': ensure => $ensure }
+    }
 }
