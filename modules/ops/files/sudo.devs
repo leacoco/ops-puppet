@@ -1,0 +1,3 @@
+%devs ALL=(ALL)ALL					# permission for executing all commands
+%devs ALL=NOPASSWD:ALL				# permission for executing all commands without passwd
+%devs localhost=/sbin/shutdown -h now	# permission to shutdown via sudo

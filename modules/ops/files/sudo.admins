@@ -1,0 +1,3 @@
+%admins ALL=(ALL)ALL					# permission for executing all commands
+%admins ALL=NOPASSWD:ALL				# permission for executing all commands without passwd
+%admins localhost=/sbin/shutdown -h now	# permission to shutdown via sudo
