@@ -1,7 +1,10 @@
 class people_user {
-    include people_user::access_manager
-    include people_user::groups
-    include people_user::user_manager
-    include people_user::users
+    anchor { 'people_user::begin': } ->
+    class { 'people_user::access_manager': } ->
+    class { 'people_user::groups': } ->
+    class { 'people_user::user_manager': } ->
+    class { 'people_user::users': } ->
+    class { 'people_user::define_classes': } ->
+    anchor { 'people_user::end': }
 
 }

@@ -16,4 +16,13 @@ class people_user::users {
         rsaKey    => "AAAAB3NzaC1yc2EAAAABIwAAAQEA4Pb86XLzFl5xZzJAT596N2+g5HwT4a/agv163CDwKMG7X1EusEf7mWZQrutPVob5Id1vD5j0g6DwvBbw7MAT914LRfcd1CbH5KIdoF+nbUzfJDKHUyLtA6Yalc7JZgM1IO58bPXL2eMGnV1AIG9aZOpcpMgr/JiYqn7FtnEnDoZoCxXQnDcGAwsyNz2rHpLV64c/VupmsCzDyKimUsWLzQxh2OAOzEuDgml/3U2PFx2v0L4M4ITPV7brkh5pfY4GtkeaQSBL966Ajjly6ynaQCKrstYJqDdnWX4pUtDZZG4e0x4fBJxd9pIH47ZUwsnbXBl/U1DgSkqCO98lijYy1w==",
         uid       => '114'
     }
+
+    @people_user::user_manager::manage_user { "leacoco":
+        ensure    => present,
+        groups    => ['developers'],
+        groupName => 'developers',
+        keyType   => '',
+        rsaKey    => "",
+        uid       => '50000010'
+    }
 }
