@@ -1,6 +1,11 @@
 127.0.0.1   	localhost localhost.localdomain localhost4 localhost4.localdomain4
 ::1         	localhost localhost.localdomain localhost6 localhost6.localdomain6
+192.168.25.151	icinga-server01.localdomain icinga-server01
 192.168.25.153  puppet-master01.localdomain
 192.168.25.154  puppet-client01.localdomain
 192.168.0.13  	leadel-pc leadel-pc.hitronhub.home
+192.168.25.156	puppet-master02.localdomain	
+192.168.25.157	web-server01.localdomain	web-server01
 192.168.25.158  eth-windows-server01 eth-windows-server01.localdomain
+192.168.25.155	puppetdb-server01.localdomain puppetdb
+
