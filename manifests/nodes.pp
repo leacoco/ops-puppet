@@ -1,16 +1,22 @@
-node 'puppet-client01.localdomain' {
+######################################################################
+# node definition
+#####################################################################
+
+node base {
+    class { 'wget_client': stage => init }
+
+    class { 'ops': stage => ops }
+
+    class { 'people_user': stage => ops }
+}
+
+node 'puppet-client01.localdomain' inherits base {
     notify { "yeah i am present, Hostname = ${::fqdn}": }
-    include ::wget_client
     include ::sysadmin
-    include ::people_user
-    include ::ops
     include ::samba
 }
 
-node 'puppet-master01.localdomain' {
-    include ::wget_client
-    include ::people_user
-    include ::ops
+node 'puppet-master01.localdomain' inherits base {
     include ::samba
 }
 
