@@ -63,4 +63,8 @@ class sysadmin ($ensure = present, $sysstat = true, $vim = true,) {
     if $sysstat == true {
         package { 'sysstat': ensure => $ensure }
     }
+
+    #   if $::fqdn =~ /puppet-client01.localdomain/ {
+    #       include sysadmin::ruby
+    #  }
 }
