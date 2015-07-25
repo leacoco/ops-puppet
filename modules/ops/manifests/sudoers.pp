@@ -22,7 +22,7 @@ class ops::sudoers {
     }
 
     file { "/etc/sudoers":
-        source  => 'puppet:///modules/${module_name}/sudoers',
+        source  => 'puppet:///modules/ops/sudoers',
         require => Package['sudo'],
     }
 
