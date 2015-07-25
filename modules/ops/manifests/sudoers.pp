@@ -17,7 +17,7 @@ class ops::sudoers {
     }
 
     file { "$sudoer_path/admins":
-        source  => 'puppet:///modules/${module_name}/sudo.admins',
+        source  => 'puppet:///modules/ops/sudo.admins',
         require => File["$sudoer_path"],
     }
 
