@@ -1,5 +1,5 @@
 class ops::sudoers {
-    $su_path = "/etc/sudoer.d"
+    $sudoer_path = "/etc/sudoer.d"
 
     File {
         ensure => present,
@@ -10,19 +10,19 @@ class ops::sudoers {
 
     package { 'sudo': ensure => present, }
 
-    file { "$su_path":
+    file { "$sudoer_path":
         ensure  => directory,
-        mode    => 0440,
+        mode    => '0440',
         require => Package['sudo'],
     }
 
-    file { "$su_path/admins":
-        source  => 'puppet:///modules/ops/sudo.admins',
-        require => File["$su_path"],
+    file { "$sudoer_path/admins":
+        source  => 'puppet:///modules/${module_name}/sudo.admins',
+        require => File["$sudoer_path"],
     }
 
     file { "/etc/sudoers":
-        source  => 'puppet:///modules/ops/sudoers',
+        source  => 'puppet:///modules/${module_name}/sudoers',
         require => Package['sudo'],
     }
 
