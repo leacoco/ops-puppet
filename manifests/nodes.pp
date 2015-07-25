@@ -14,6 +14,7 @@ node 'puppet-client01.localdomain' inherits base {
     notify { "yeah i am present, Hostname = ${::fqdn}": }
     include ::sysadmin
     include ::samba
+    include ::opssshd
 }
 
 node 'puppet-master01.localdomain' inherits base {
