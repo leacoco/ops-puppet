@@ -1,0 +1,12 @@
+---
+:backends:
+  - yaml
+  - json
+:yaml:
+  :datadir: "/home/leadel/.puppetlabs/etc/environments/%{::environments}/hieradata"
+:json:
+  :datadir: "/home/leadel/.puppetlabs/etc/environments/%{::environments}/hieradata"
+:hierarchy:
+  - "nodes/%{::trusted.certname}"
+  - "virtual/%{::virtual}"
+  - common 

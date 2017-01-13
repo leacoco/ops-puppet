@@ -1,0 +1,22 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+	config.vm.box	= "precise32"
+	config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+	config.vm.provider :virtualbox do |vb|
+		vb.customize ["modifyvm", :id, "--memory", 1028, "--cpus", 2]
+	end
+
+	#Mount repo into /etc/puppet
+	
+	config.vm.synced_folder "../", "/etc/puppet"
+
+	#Run the puppet shell script
+	
+	config.vm.provision "shell" do |s|
+		s.path = "update-puppet.sh"
+	end
+
+	config.vm.hostname = "localdev.softcom.local"
+end

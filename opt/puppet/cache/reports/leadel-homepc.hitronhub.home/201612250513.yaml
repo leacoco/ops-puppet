@@ -1,0 +1,478 @@
+--- !ruby/object:Puppet::Transaction::Report
+metrics:
+  resources: !ruby/object:Puppet::Util::Metric
+    name: resources
+    label: Resources
+    values:
+    - - total
+      - Total
+      - 11
+    - - skipped
+      - Skipped
+      - 0
+    - - failed
+      - Failed
+      - 0
+    - - failed_to_restart
+      - Failed to restart
+      - 0
+    - - restarted
+      - Restarted
+      - 0
+    - - changed
+      - Changed
+      - 4
+    - - out_of_sync
+      - Out of sync
+      - 4
+    - - scheduled
+      - Scheduled
+      - 0
+    - - corrective_change
+      - Corrective change
+      - 0
+  time: !ruby/object:Puppet::Util::Metric
+    name: time
+    label: Time
+    values:
+    - - notify
+      - Notify
+      - 0.00190453
+    - - schedule
+      - Schedule
+      - 0.00036272699999999997
+    - - filebucket
+      - Filebucket
+      - 9.225e-05
+    - - config_retrieval
+      - Config retrieval
+      - 0.258874213
+    - - total
+      - Total
+      - 0.26123372
+  changes: !ruby/object:Puppet::Util::Metric
+    name: changes
+    label: Changes
+    values:
+    - - total
+      - Total
+      - 4
+  events: !ruby/object:Puppet::Util::Metric
+    name: events
+    label: Events
+    values:
+    - - total
+      - Total
+      - 4
+    - - failure
+      - Failure
+      - 0
+    - - success
+      - Success
+      - 4
+logs:
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: begin
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-12-25T06:13:23.159213207+01:00'
+  file: 
+  line: 
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: defined 'message' as 'begin'
+  source: "/Stage[main]/Main/Notify[begin]/message"
+  tags:
+  - notice
+  - notify
+  - begin
+  - class
+  time: '2016-12-25T06:13:23.159330645+01:00'
+  file: "/home/leadel/.puppetlabs/etc/code/modules/example01/example.pp"
+  line: 3
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: foo
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-12-25T06:13:23.160273844+01:00'
+  file: 
+  line: 
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: defined 'message' as 'foo'
+  source: "/Stage[main]/Myclass/Notify[foo]/message"
+  tags:
+  - notice
+  - notify
+  - foo
+  - class
+  - myclass
+  time: '2016-12-25T06:13:23.160354040+01:00'
+  file: "/home/leadel/.puppetlabs/etc/code/modules/example01/example.pp"
+  line: 9
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: bar
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-12-25T06:13:23.160953158+01:00'
+  file: 
+  line: 
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: defined 'message' as 'bar'
+  source: "/Stage[main]/Myclass/Notify[bar]/message"
+  tags:
+  - notice
+  - notify
+  - bar
+  - class
+  - myclass
+  time: '2016-12-25T06:13:23.161023606+01:00'
+  file: "/home/leadel/.puppetlabs/etc/code/modules/example01/example.pp"
+  line: 10
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: end
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-12-25T06:13:23.161912081+01:00'
+  file: 
+  line: 
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: defined 'message' as 'end'
+  source: "/Stage[main]/Main/Notify[end]/message"
+  tags:
+  - notice
+  - notify
+  - end
+  - class
+  time: '2016-12-25T06:13:23.161986240+01:00'
+  file: "/home/leadel/.puppetlabs/etc/code/modules/example01/example.pp"
+  line: 14
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: Applied catalog in 0.38 seconds
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-12-25T06:13:23.535384028+01:00'
+  file: 
+  line: 
+resource_statuses:
+  Notify[begin]: !ruby/object:Puppet::Resource::Status
+    title: begin
+    file: "/home/leadel/.puppetlabs/etc/code/modules/example01/example.pp"
+    line: 3
+    resource: Notify[begin]
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Main
+    - Notify[begin]
+    evaluation_time: 0.000581765
+    tags:
+    - notify
+    - begin
+    - class
+    time: '2016-12-25T06:13:23.158843880+01:00'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: :absent
+      desired_value: begin
+      historical_value: 
+      message: defined 'message' as 'begin'
+      name: :message_changed
+      status: success
+      time: 2016-12-25 06:13:23.159124419 +01:00
+      redacted: 
+      corrective_change: false
+    corrective_change: false
+  Notify[foo]: !ruby/object:Puppet::Resource::Status
+    title: foo
+    file: "/home/leadel/.puppetlabs/etc/code/modules/example01/example.pp"
+    line: 9
+    resource: Notify[foo]
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Myclass
+    - Notify[foo]
+    evaluation_time: 0.000466136
+    tags:
+    - notify
+    - foo
+    - class
+    - myclass
+    time: '2016-12-25T06:13:23.160001245+01:00'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: :absent
+      desired_value: foo
+      historical_value: 
+      message: defined 'message' as 'foo'
+      name: :message_changed
+      status: success
+      time: 2016-12-25 06:13:23.160229004 +01:00
+      redacted: 
+      corrective_change: false
+    corrective_change: false
+  Notify[bar]: !ruby/object:Puppet::Resource::Status
+    title: bar
+    file: "/home/leadel/.puppetlabs/etc/code/modules/example01/example.pp"
+    line: 10
+    resource: Notify[bar]
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Myclass
+    - Notify[bar]
+    evaluation_time: 0.000434574
+    tags:
+    - notify
+    - bar
+    - class
+    - myclass
+    time: '2016-12-25T06:13:23.160700545+01:00'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: :absent
+      desired_value: bar
+      historical_value: 
+      message: defined 'message' as 'bar'
+      name: :message_changed
+      status: success
+      time: 2016-12-25 06:13:23.160913599 +01:00
+      redacted: 
+      corrective_change: false
+    corrective_change: false
+  Notify[end]: !ruby/object:Puppet::Resource::Status
+    title: end
+    file: "/home/leadel/.puppetlabs/etc/code/modules/example01/example.pp"
+    line: 14
+    resource: Notify[end]
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Main
+    - Notify[end]
+    evaluation_time: 0.000422055
+    tags:
+    - notify
+    - end
+    - class
+    time: '2016-12-25T06:13:23.161655018+01:00'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: :absent
+      desired_value: end
+      historical_value: 
+      message: defined 'message' as 'end'
+      name: :message_changed
+      status: success
+      time: 2016-12-25 06:13:23.161862972 +01:00
+      redacted: 
+      corrective_change: false
+    corrective_change: false
+  Schedule[puppet]: !ruby/object:Puppet::Resource::Status
+    title: puppet
+    file: 
+    line: 
+    resource: Schedule[puppet]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[puppet]
+    evaluation_time: 8.7059e-05
+    tags:
+    - schedule
+    - puppet
+    time: '2016-12-25T06:13:23.162782106+01:00'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[hourly]: !ruby/object:Puppet::Resource::Status
+    title: hourly
+    file: 
+    line: 
+    resource: Schedule[hourly]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[hourly]
+    evaluation_time: 7.5664e-05
+    tags:
+    - schedule
+    - hourly
+    time: '2016-12-25T06:13:23.162976280+01:00'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[daily]: !ruby/object:Puppet::Resource::Status
+    title: daily
+    file: 
+    line: 
+    resource: Schedule[daily]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[daily]
+    evaluation_time: 4.9854e-05
+    tags:
+    - schedule
+    - daily
+    time: '2016-12-25T06:13:23.163146418+01:00'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[weekly]: !ruby/object:Puppet::Resource::Status
+    title: weekly
+    file: 
+    line: 
+    resource: Schedule[weekly]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[weekly]
+    evaluation_time: 5.0683e-05
+    tags:
+    - schedule
+    - weekly
+    time: '2016-12-25T06:13:23.163314762+01:00'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[monthly]: !ruby/object:Puppet::Resource::Status
+    title: monthly
+    file: 
+    line: 
+    resource: Schedule[monthly]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[monthly]
+    evaluation_time: 5.0299e-05
+    tags:
+    - schedule
+    - monthly
+    time: '2016-12-25T06:13:23.163458085+01:00'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[never]: !ruby/object:Puppet::Resource::Status
+    title: never
+    file: 
+    line: 
+    resource: Schedule[never]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[never]
+    evaluation_time: 4.9168e-05
+    tags:
+    - schedule
+    - never
+    time: '2016-12-25T06:13:23.163615224+01:00'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Filebucket[puppet]: !ruby/object:Puppet::Resource::Status
+    title: puppet
+    file: 
+    line: 
+    resource: Filebucket[puppet]
+    resource_type: Filebucket
+    containment_path:
+    - Filebucket[puppet]
+    evaluation_time: 9.225e-05
+    tags:
+    - filebucket
+    - puppet
+    time: '2016-12-25T06:13:23.163812131+01:00'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+host: leadel-homepc.hitronhub.home
+time: 2016-12-25 06:13:23.147666159 +01:00
+kind: apply
+report_format: 6
+puppet_version: 4.8.1
+configuration_version: 1482642802
+transaction_uuid: 84cdf1e8-90ba-4407-9b7e-57d4b5f5bf80
+code_id: 
+catalog_uuid: 14e3e000-d2aa-422e-9120-0bcdf338f746
+cached_catalog_status: not_used
+master_used: 
+environment: production
+status: changed
+noop: false
+noop_pending: false
+corrective_change: false

@@ -1,0 +1,109 @@
+---
+File[/home/leadel/.puppetlabs/etc/puppet]:
+  :checked: 2016-12-18 21:14:08.530894008 +01:00
+File[/home/leadel/.puppetlabs/etc/code]:
+  :checked: 2016-12-18 21:14:08.531240080 +01:00
+File[/home/leadel/.puppetlabs/opt/puppet/cache]:
+  :checked: 2016-12-18 21:14:08.531494054 +01:00
+File[/home/leadel/.puppetlabs/var/log]:
+  :checked: 2016-12-18 21:14:08.531880305 +01:00
+File[/home/leadel/.puppetlabs/opt/puppet/cache/state]:
+  :checked: 2016-12-18 21:14:08.532254989 +01:00
+File[/home/leadel/.puppetlabs/var/run]:
+  :checked: 2016-12-18 21:14:08.532594492 +01:00
+File[/home/leadel/.puppetlabs/opt/puppet/cache/lib]:
+  :checked: 2016-12-18 21:14:08.532898848 +01:00
+File[/home/leadel/.puppetlabs/opt/puppet/cache/preview]:
+  :checked: 2016-12-18 21:14:08.533196317 +01:00
+File[/home/leadel/.puppetlabs/etc/puppet/ssl]:
+  :checked: 2016-12-18 21:14:08.533510353 +01:00
+File[/home/leadel/.puppetlabs/etc/puppet/ssl/certs]:
+  :checked: 2016-12-18 21:14:08.533877151 +01:00
+File[/home/leadel/.puppetlabs/etc/puppet/ssl/public_keys]:
+  :checked: 2016-12-18 21:14:08.534194025 +01:00
+File[/home/leadel/.puppetlabs/etc/puppet/ssl/certificate_requests]:
+  :checked: 2016-12-18 21:14:08.534517992 +01:00
+File[/home/leadel/.puppetlabs/etc/puppet/ssl/private_keys]:
+  :checked: 2016-12-18 21:14:08.534831305 +01:00
+File[/home/leadel/.puppetlabs/etc/puppet/ssl/private]:
+  :checked: 2016-12-18 21:14:08.535151219 +01:00
+File[/home/leadel/.puppetlabs/opt/puppet/cache/client_yaml]:
+  :checked: 2016-12-18 21:14:08.535446595 +01:00
+File[/home/leadel/.puppetlabs/opt/puppet/cache/client_data]:
+  :checked: 2016-12-18 21:14:08.535772050 +01:00
+File[/home/leadel/.puppetlabs/opt/puppet/cache/clientbucket]:
+  :checked: 2016-12-18 21:14:08.536071569 +01:00
+File[/home/leadel/.puppetlabs/opt/puppet/cache/state/graphs]:
+  :checked: 2016-12-18 21:14:08.536348419 +01:00
+File[/home/leadel/.puppetlabs/opt/puppet/cache/facts.d]:
+  :checked: 2016-12-18 21:14:08.536600700 +01:00
+:configuration: {}
+Stage[main]:
+  :checked: 2017-01-01 04:32:51.290642246 +01:00
+Class[Settings]:
+  :checked: 2017-01-01 04:32:51.291044261 +01:00
+Class[Main]:
+  :checked: 2017-01-01 04:32:51.291207873 +01:00
+Schedule[puppet]:
+  :checked: 2017-01-01 04:32:51.426689930 +01:00
+Schedule[hourly]:
+  :checked: 2017-01-01 04:32:51.427134528 +01:00
+Schedule[daily]:
+  :checked: 2017-01-01 04:32:51.427476212 +01:00
+Schedule[weekly]:
+  :checked: 2017-01-01 04:32:51.427881230 +01:00
+Schedule[monthly]:
+  :checked: 2017-01-01 04:32:51.428310688 +01:00
+Schedule[never]:
+  :checked: 2017-01-01 04:32:51.428619280 +01:00
+Filebucket[puppet]:
+  :checked: 2017-01-01 04:32:51.429240363 +01:00
+Class[Wget]:
+  :checked: 2016-12-25 08:56:53.121519474 +01:00
+Package[wget]:
+  :checked: 2016-12-25 08:56:53.185739352 +01:00
+Notify[begin]:
+  :checked: 2016-12-25 06:18:02.490902201 +01:00
+  :synced: 2016-12-25 06:18:02.491786811 +01:00
+Class[Myclass]:
+  :checked: 2016-12-26 08:13:52.518755780 +01:00
+Notify[foo]:
+  :checked: 2016-12-25 06:18:02.492677326 +01:00
+  :synced: 2016-12-25 06:18:02.493249066 +01:00
+Notify[bar]:
+  :checked: 2016-12-25 06:18:02.493768404 +01:00
+  :synced: 2016-12-25 06:18:02.494396349 +01:00
+Notify[end]:
+  :checked: 2016-12-25 06:18:02.495298430 +01:00
+  :synced: 2016-12-25 06:18:02.495792459 +01:00
+Class[Classa]:
+  :checked: 2016-12-25 07:25:29.838651513 +01:00
+Class[First]:
+  :checked: 2016-12-25 07:25:29.837839005 +01:00
+Notify[I am the First Class]:
+  :checked: 2016-12-25 07:25:29.837036567 +01:00
+  :synced: 2016-12-25 07:25:29.837577159 +01:00
+Class[Classb]:
+  :checked: 2016-12-25 07:25:29.838313562 +01:00
+Class[Second]:
+  :checked: 2016-12-25 07:25:29.839687709 +01:00
+Notify[I am the Second Class]:
+  :checked: 2016-12-25 07:25:29.839087523 +01:00
+  :synced: 2016-12-25 07:25:29.839463072 +01:00
+Notify[Module wget will be installed]:
+  :checked: 2016-12-25 08:56:53.121794860 +01:00
+  :synced: 2016-12-25 08:56:53.122401221 +01:00
+Notify[End installation of module Wget]:
+  :checked: 2016-12-25 08:56:53.197885992 +01:00
+  :synced: 2016-12-25 08:56:53.198412562 +01:00
+File[/tmp/motd]:
+  :checked: 2016-12-26 08:13:52.518512084 +01:00
+  :synced: 2016-12-26 07:50:05.242424454 +01:00
+Notify[Hallo leadel from Ubuntu]:
+  :checked: 2017-01-01 04:30:14.293043887 +01:00
+  :synced: 2017-01-01 04:30:14.293580150 +01:00
+Notify[Hallo this time from Debian]:
+  :checked: 2017-01-01 04:31:25.845450345 +01:00
+  :synced: 2017-01-01 04:31:25.845902805 +01:00
+User[jenkins]:
+  :checked: 2017-01-01 04:32:51.292097561 +01:00
