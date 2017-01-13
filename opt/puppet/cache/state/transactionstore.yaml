@@ -1,7 +1,0 @@
----
-resources:
-  User[jenkins]:
-    parameters:
-      ensure:
-        system_value:
-        - :absent
